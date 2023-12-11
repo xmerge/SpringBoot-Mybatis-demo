@@ -23,7 +23,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
-                <!-- 因为已经包含了snakeyaml，所以需要排除掉避免重复引入 -->
+                <!-- 已经包含了snakeyaml，所以需要排除掉避免重复引入 -->
                 <exclusion>
                     <groupId>org.yaml</groupId>
                     <artifactId>snakeyaml</artifactId>
