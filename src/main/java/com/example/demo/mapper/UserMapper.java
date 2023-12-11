@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * 用户数据访问对象的数据库 mapper 接口。
+ * @author Xmerge
  */
 @Repository
 public interface UserMapper {
@@ -67,4 +68,6 @@ public interface UserMapper {
      * @return 查询到的用户数据对象集合
      */
     List<UserDO> selectByIds(@Param("ids") Collection<Integer> ids);
+
+    List<UserDO> selectAll();
 }

@@ -8,6 +8,9 @@ import lombok.experimental.Accessors;
 
 import java.util.Date;
 
+/**
+ * @author Xmerge
+ */
 @Data
 @Accessors(chain = true)
 @ApiModel(description = "用户数据对象")

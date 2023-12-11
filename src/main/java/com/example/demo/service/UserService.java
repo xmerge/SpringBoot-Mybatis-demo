@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * 用户服务接口
+ * @author Xmerge
  */
 public interface UserService {
     /**
@@ -36,7 +37,6 @@ public interface UserService {
      */
     int deleteByUserName(String username);
 
-
     /**
      * 根据ID查询用户
      * @param id 要查询的用户ID
@@ -57,4 +57,10 @@ public interface UserService {
      * @return 返回查询到的用户对象列表
      */
     List<UserDO> selectByIds(Collection<Integer> ids);
+
+    /**
+     * 查询所有用户
+     * @return 返回查询到的用户对象列表
+     */
+    List<UserDO> selectAll();
 }

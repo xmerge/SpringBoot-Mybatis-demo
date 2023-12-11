@@ -3,9 +3,9 @@ package com.example.demo.service.impl;
 import com.example.demo.entity.UserDO;
 import com.example.demo.mapper.UserMapper;
 import com.example.demo.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Collection;
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl implements UserService {
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     /**
@@ -81,4 +81,14 @@ public class UserServiceImpl implements UserService {
         // 实现根据ID列表查询逻辑
         return userMapper.selectByIds(ids);
     }
+
+    /**
+     * 查询所有用户
+     * @return 返回查询到的用户对象列表
+     */
+    @Override
+    public List<UserDO> selectAll() {
+        return userMapper.selectAll();
+    }
+
 }

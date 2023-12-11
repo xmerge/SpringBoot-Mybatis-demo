@@ -15,6 +15,7 @@
     <description>demo</description>
     <properties>
         <java.version>17</java.version>
+        <fastjson2.version>2.0.21</fastjson2.version>
     </properties>
     <dependencies>
         <!-- 使用Spring Boot Web Starter可以快速构建一个基于Spring Boot的Web应用程序 -->
@@ -27,9 +28,19 @@
                     <groupId>org.yaml</groupId>
                     <artifactId>snakeyaml</artifactId>
                 </exclusion>
+<!--                &lt;!&ndash; 去除默认的Jackson &ndash;&gt;-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter-json</artifactId>-->
+<!--                </exclusion>-->
             </exclusions>
         </dependency>
-        <!-- Lombok是一个用于Java的辅助工具，可以简化Java开发过程 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.4.1</version>
+        </dependency>
+        <!-- 简化Java开发过程 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -50,6 +61,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>${fastjson2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2-extension</artifactId>
+            <version>${fastjson2.version}</version>
         </dependency>
         <!-- JUnit是流行的单元测试框架，用于编写和运行Java单元测试 -->
         <dependency>

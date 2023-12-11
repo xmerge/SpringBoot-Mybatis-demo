@@ -62,4 +62,9 @@
         </foreach>
     </select>
 
+    <select id="selectAll" resultType="UserDO">
+        SELECT
+        <include refid="FIELDS" />
+        FROM users
+    </select>
 </mapper>
